@@ -1,0 +1,27 @@
+{
+  "name": "myradurkin.com",
+  "version": "0.0.0",
+  "description": "Brochure site for therapist",
+  "main": "index.js",
+  "scripts": {
+    "test": "testsite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexdvance/myradurkin.git"
+  },
+  "author": "Alex Vance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexdvance/myradurkin/issues"
+  },
+  "homepage": "https://github.com/alexdvance/myradurkin",
+  "dependencies": {
+    "angular": "~1.5.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-sass": "^2.2.0",
+    "node-sass": "~3.4.2"
+  }
+}
