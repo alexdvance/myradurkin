@@ -1,5 +1,62 @@
+// Bootstrap Reboot only
+//
+// Includes only Normalize and our custom Reboot reset.
+
+@import "variables";
+
+// Utilities
+@import "mixins/breakpoints";
+@import "mixins/hover";
+@import "mixins/screen-reader";
+@import "mixins/tab-focus";
+@import "mixins/text-emphasis";
+@import "mixins/text-hide";
+@import "mixins/text-truncate";
+
+// // Components
+@import "mixins/lists";
+
+
+// // Layout
+@import "mixins/clearfix";
+@import "mixins/center-block";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/pulls";
+
+// Reset and dependencies
+@import "normalize";
+@import "reboot";
+@import "type";
+
+// Core CSS
+@import "grid";
+
+// Utility classes
+@import "utilities";
+@import "utilities-spacing";
+@import "utilities-responsive";
+
+
+// Color vars
+$white: #ffffff;
+$bloodorange: #A64255;
+$bloodorange-dark: #923A4A;
+$purple: #2D1C46;
+$pink: #8B4F77;
+$pink-light: #ecdde7;
+
+
+$peach-light: #ecd2d5;
+$pink-old: #db8eae;
+
+
+// Globals
+
 body {
   font-family: "europa", sans-serif;
+  color: $white;
+  background-color: $pink;
 }
 
 h1,
@@ -7,6 +64,78 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.header-type {
   font-family: "adobe-garamond-pro", sans-serif;
+  font-style: italic;
 }
+
+a {
+  color: #ffffff;
+
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+// Position relative
+
+.position-relative {
+  position: relative;
+}
+
+
+// Image styles
+
+.max-width-100pct {
+  max-width: 100%;
+}
+
+.border-radius-50pct {
+  border-radius: 50%;
+}
+
+
+// Text styles
+
+.color-purple {
+  color: $purple;
+}
+
+.list-unstyled {
+  margin-bottom: 0;
+}
+
+.text-on-dark {
+  color: $white;
+}
+
+
+// Backgrounds
+
+.header--container {
+  position: relative;
+  background: url(/images/orange-lilies.jpg) center;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(80, 46, 132, .5);
+  }
+}
+
+.background-color-purple {
+  background-color: $purple;
+}
+
+.background-color-pink {
+  background-color: $pink;
+}
+
