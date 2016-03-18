@@ -43,8 +43,8 @@ $white: #ffffff;
 $bloodorange: #A64255;
 $bloodorange-dark: #923A4A;
 $purple: #2D1C46;
-$pink: #8B4F77;
-$pink-light: #ecdde7;
+$pink-purple: #783761;
+$pink-purple-light: #ecdde7;
 
 
 $peach-light: #ecd2d5;
@@ -56,7 +56,7 @@ $pink-old: #db8eae;
 body {
   font-family: "europa", sans-serif;
   color: $white;
-  background-color: $pink;
+  background-color: $purple;
 }
 
 h1,
@@ -73,7 +73,9 @@ h6,
 a {
   color: #ffffff;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: white;
     text-decoration: underline;
   }
@@ -136,6 +138,6 @@ a {
 }
 
 .background-color-pink {
-  background-color: $pink;
+  background-color: $pink-purple;
 }
 
