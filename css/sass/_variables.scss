@@ -92,6 +92,22 @@ $spacers: (
   6: (
     x:   ($spacer-x * 6),
     y:   ($spacer-y * 6)
+  ),
+  7: (
+    x:   ($spacer-x * 7),
+    y:   ($spacer-y * 7)
+  ),
+  8: (
+    x:   ($spacer-x * 8),
+    y:   ($spacer-y * 8)
+  ),
+  9: (
+    x:   ($spacer-x * 9),
+    y:   ($spacer-y * 9)
+  ),
+  10: (
+    x:   ($spacer-x * 10),
+    y:   ($spacer-y * 10)
   )
 ) !default;
 $border-width:               1px !default;
