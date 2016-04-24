@@ -1948,6 +1948,9 @@ a {
 .text-on-dark {
   color: #ffffff; }
 
+.text-underline {
+  text-decoration: underline; }
+
 .header--container {
   position: relative;
   background: url(/images/orange-lilies.jpg) center;

@@ -3,16 +3,24 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <ul navigation class="row list-unstyled">
         <li class="col-xs-3 text-xs-center">
-          <a class="h5 header-type" href="/#/">Home</a>
+          <a class="h5 header-type" 
+             ng-class="{ 'text-underline': $root.page === 'home' }"
+             href="/#/">Home</a>
         </li>
         <li class="col-xs-3 text-xs-center">
-          <a class="h5 header-type" href="/#/about">About</a>
+          <a class="h5 header-type" 
+             ng-class="{ 'text-underline': $root.page === 'about' }"
+             href="/#/about">About</a>
         </li>
         <li class="col-xs-3 text-xs-center">
-          <a class="h5 header-type" href="/#/practice">Practice</a>
+          <a class="h5 header-type" 
+             ng-class="{ 'text-underline': $root.page === 'practice' }"
+             href="/#/practice">Practice</a>
         </li>
         <li class="col-xs-3 text-xs-center">
-          <a class="h5 header-type" href="/#/services">Services</a>
+          <a class="h5 header-type" 
+             ng-class="{ 'text-underline': $root.page === 'services' }"
+             href="/#/services">Services</a>
         </li>
       </ul>
     </div>
