@@ -99,6 +99,14 @@ a {
   border-radius: 50%;
 }
 
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
 
 // Text styles
 
@@ -137,12 +145,61 @@ a {
   }
 }
 
+.footer--container {
+  position: relative;
+  background: url(/images/contact.jpg) center;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(80, 46, 132, .5);
+  }
+}
+
 .background-color-purple {
   background-color: $purple;
 }
 
 .background-color-pink {
   background-color: $pink-purple;
+}
+
+
+
+// Headers
+
+.header-in-image {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+.submenu {
+  position: absolute;
+  width: 400%;
+  right: 0;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.parent-hover-child {
+  visibility: hidden;
+}
+
+.parent-hover:hover .parent-hover-child {
+  visibility: visible;
 }
 
 
