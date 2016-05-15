@@ -1,7 +1,7 @@
 <div class="text-on-dark p-t-half p-b-half">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <ul navigation class="row list-unstyled">
+      <ul navigation class="row list-unstyled position-relative">
         <li class="col-xs-3 text-xs-center">
           <a class="h5 header-type" 
              ng-class="{ 'text-underline': $root.page === 'home' }"
@@ -17,10 +17,20 @@
              ng-class="{ 'text-underline': $root.page === 'practice' }"
              href="/#/practice">Practice</a>
         </li>
-        <li class="col-xs-3 text-xs-center">
+        <li class="col-xs-3 text-xs-center parent-hover">
           <a class="h5 header-type" 
              ng-class="{ 'text-underline': $root.page === 'services' }"
              href="/#/services">Services</a>
+          <ul class="row list-unstyled submenu parent-hover-child">
+            <li class="display-inline-block margin-left-10 text-xs-center">
+              <a href="/#/services#self-hypnosis">Self-Hypnosis</a>
+            </li>
+            <li class="display-inline-block margin-left-10 text-xs-center">Sex Therapy</li>
+            <li class="display-inline-block margin-left-10 text-xs-center">
+              <a href="/#/services#eating-disorders">Eating Disorders</a>
+            </li>
+            <li class="display-inline-block margin-left-10 text-xs-center">Performance Anxiety</li>
+          </ul>
         </li>
       </ul>
     </div>
