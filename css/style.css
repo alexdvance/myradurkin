@@ -1930,50 +1930,24 @@ a {
     color: white;
     text-decoration: underline; }
 
-.position-relative {
-  position: relative; }
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
+  padding-top: 20px; }
 
-.max-width-100pct {
-  max-width: 100%; }
-
-.border-radius-50pct {
-  border-radius: 50%; }
-
-.margin-top-20 {
-  margin-top: 20px; }
-
-.margin-bottom-20 {
-  margin-bottom: 20px; }
-
-.color-purple {
-  color: #2D1C46; }
-
-.list-unstyled {
-  margin-bottom: 0; }
-
-.text-on-dark {
-  color: #ffffff; }
-
-.text-underline {
-  text-decoration: underline; }
+.prose h1:first-child, .prose h2:first-child, .prose h3:first-child, .prose h4:first-child, .prose h5:first-child {
+  padding-top: 0; }
 
 .header--container {
-  position: relative;
-  background: url(/images/orange-lilies.jpg) center;
-  background-size: cover; }
-  .header--container:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(80, 46, 132, 0.5); }
+  background: url(/images/orange-lilies.jpg) center; }
 
 .footer--container {
+  background: url(/images/contact.jpg) center; }
+
+.header--container,
+.footer--container {
   position: relative;
-  background: url(/images/contact.jpg) center;
+  background-attachment: fixed;
   background-size: cover; }
+  .header--container:before,
   .footer--container:before {
     content: "";
     position: absolute;
@@ -1983,6 +1957,22 @@ a {
     bottom: 0;
     background: rgba(80, 46, 132, 0.5); }
 
+.background {
+  position: relative;
+  background-image: url(/images/red-flowers.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top: 1px solid #2D1C46;
+  border-bottom: 1px solid #2D1C46; }
+  .background:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(45, 28, 70, 0.9); }
+
 .background-color-purple {
   background-color: #2D1C46; }
 
@@ -1991,26 +1981,20 @@ a {
 
 .header-in-image {
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   left: 0;
   right: 0; }
 
 .submenu {
-  position: absolute;
-  width: 400%;
-  right: 0; }
+  position: relative;
+  right: 450%;
+  width: 580%; }
 
-.margin-left-10 {
-  margin-left: 10px; }
-
-.display-inline-block {
-  display: inline-block; }
-
-.parent-hover-child {
-  visibility: hidden; }
-
-.parent-hover:hover .parent-hover-child {
-  visibility: visible; }
+@media (min-width: 544px) {
+  .submenu {
+    position: relative;
+    right: 450%;
+    width: 650%; } }
 
 .google-maps {
   position: relative;
@@ -2024,3 +2008,63 @@ a {
   left: 0;
   width: 100% !important;
   height: 100% !important; }
+
+.position-relative {
+  position: relative; }
+
+.img-mask {
+  position: relative;
+  height: 300px;
+  overflow: hidden; }
+
+.img-mask--img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+  border: 1px solid #2D1C46; }
+
+.center {
+  margin-right: auto;
+  margin-left: auto; }
+
+.max-width-100pct {
+  max-width: 100%; }
+
+.border-radius-50pct {
+  border-radius: 50%; }
+
+.color-purple {
+  color: #2D1C46; }
+
+.list-unstyled {
+  margin-bottom: 0; }
+
+.text-on-dark {
+  color: #ffffff; }
+
+.text-underline {
+  text-decoration: underline; }
+
+.margin-left-10 {
+  margin-left: 10px; }
+
+.margin-top-20 {
+  margin-top: 20px; }
+
+.margin-bottom-20 {
+  margin-bottom: 20px; }
+
+.margin-bottom-32 {
+  margin-bottom: 32px; }
+
+.display-inline-block {
+  display: inline-block; }
+
+.parent-hover-child {
+  visibility: hidden; }
+
+.parent-hover:hover .parent-hover-child {
+  visibility: visible; }

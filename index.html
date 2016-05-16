@@ -23,6 +23,8 @@
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <meta name="viewport" content="initial-scale=1">
+
   <script src="https://use.typekit.net/qyn1edp.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script src="/node_modules/angular/angular.js"></script>
@@ -46,7 +48,8 @@
         </div>
       </div>
 
-      <div ng-include="'/templates/_nav.html'"></div>
+      <div ng-include="'/templates/_nav.html'"
+            class="container text-on-dark p-t-half"></div>
     </div>
 
     <div ng-view></div>

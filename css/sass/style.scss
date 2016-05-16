@@ -81,7 +81,124 @@ a {
   }
 }
 
+.prose {
+  h1, h2, h3, h4, h5 {
+    padding-top: 20px;
+  }
+}
 
+.prose {
+  h1, h2, h3, h4, h5 {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+
+// Backgrounds
+.header--container {
+  background: url(/images/orange-lilies.jpg) center;
+}
+
+.footer--container {
+  background: url(/images/contact.jpg) center;
+}
+
+.header--container,
+.footer--container {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(80, 46, 132, .5);
+  }
+}
+
+.background {
+  position: relative;
+  // background-attachment: fixed;
+  background-image: url(/images/red-flowers.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top: 1px solid $purple;
+  border-bottom: 1px solid $purple;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(45, 28, 70, .9);
+  }
+}
+
+.background-color-purple {
+  background-color: $purple;
+}
+
+.background-color-pink {
+  background-color: $pink-purple;
+}
+
+
+
+// Headers
+
+.header-in-image {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.submenu {
+  position: relative;
+  right: 450%;
+  width: 580%;
+}
+
+@media (min-width: 544px) {
+  .submenu {
+    position: relative;
+    right: 450%;
+    width: 650%;
+  }
+}
+
+
+
+// Widgets
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+// 
+// Utilities
+// 
 // Position relative
 
 .position-relative {
@@ -91,20 +208,33 @@ a {
 
 // Image styles
 
+.img-mask {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-mask--img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: auto;
+  border: 1px solid $purple;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .max-width-100pct {
   max-width: 100%;
 }
 
 .border-radius-50pct {
   border-radius: 50%;
-}
-
-.margin-top-20 {
-  margin-top: 20px;
-}
-
-.margin-bottom-20 {
-  margin-bottom: 20px;
 }
 
 
@@ -127,67 +257,21 @@ a {
 }
 
 
-// Backgrounds
-
-.header--container {
-  position: relative;
-  background: url(/images/orange-lilies.jpg) center;
-  background-size: cover;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(80, 46, 132, .5);
-  }
-}
-
-.footer--container {
-  position: relative;
-  background: url(/images/contact.jpg) center;
-  background-size: cover;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(80, 46, 132, .5);
-  }
-}
-
-.background-color-purple {
-  background-color: $purple;
-}
-
-.background-color-pink {
-  background-color: $pink-purple;
-}
-
-
-
-// Headers
-
-.header-in-image {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-}
-
-.submenu {
-  position: absolute;
-  width: 400%;
-  right: 0;
-}
-
+// Margins
 .margin-left-10 {
   margin-left: 10px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-32 {
+  margin-bottom: 32px;
 }
 
 .display-inline-block {
@@ -201,22 +285,3 @@ a {
 .parent-hover:hover .parent-hover-child {
   visibility: visible;
 }
-
-
-
-// Widgets
-
-.google-maps {
-    position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
-    height: 0;
-    overflow: hidden;
-}
-.google-maps iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-}
-
