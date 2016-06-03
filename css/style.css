@@ -1932,9 +1932,11 @@ a {
 
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
   padding-top: 20px; }
+  .prose h1:first-child, .prose h2:first-child, .prose h3:first-child, .prose h4:first-child, .prose h5:first-child {
+    padding-top: 0; }
 
-.prose h1:first-child, .prose h2:first-child, .prose h3:first-child, .prose h4:first-child, .prose h5:first-child {
-  padding-top: 0; }
+.prose li {
+  margin-bottom: 1rem; }
 
 .header--container {
   background: url(/images/orange-lilies.jpg) center; }
