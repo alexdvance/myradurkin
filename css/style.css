@@ -1939,7 +1939,7 @@ a {
   margin-bottom: 1rem; }
 
 .header--container {
-  background: url(/images/orange-lilies.jpg) center; }
+  background: url(/images/orange-lilies.jpg) center center; }
 
 .footer--container {
   background: url(/images/contact.jpg) center; }
