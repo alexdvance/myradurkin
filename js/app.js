@@ -3,9 +3,26 @@ angular
     'ngRoute'
   ])
   .config([
+    '$httpProvider',
     '$routeProvider',
     '$locationProvider',
-    function($routeProvider, $locationProvider) {
+    function($httpProvider, $routeProvider, $locationProvider) {
+      var siteVersion = '17.6.1';
+
+      $httpProvider.interceptors.push(function() {
+        return {
+          'request': function(config) {
+            // !config.cached is set by angular-templatecache option
+            if (!config.cached) {
+              config.url += ( config.url.indexOf('?') > -1 ? '&' : '?' )
+                + config.paramSerializer({v: siteVersion});
+            }
+
+            return config;
+          }
+        }
+      });
+
       $routeProvider.
         when('/', {
           templateUrl: 'templates/_home.html',
@@ -37,16 +54,16 @@ angular
 
       // $locationProvider.html5Mode(true);
   }])
-  .run(['$rootScope', '$route', '$anchorScroll', 
+  .run(['$rootScope', '$route', '$anchorScroll',
         function($rootScope, $route, $anchorScroll) {
           $rootScope.$on("$routeChangeSuccess", function(currentRoute, previousRoute){
             //Change page title, based on Route information
             $rootScope.title = $route.current.title;
             $rootScope.page = $route.current.page;
-      
-      
+
+
             // $location.hash('bottom');
-      
+
             // jump to anchor links when applicable
             $anchorScroll();
           });
